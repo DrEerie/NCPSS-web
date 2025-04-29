@@ -17,6 +17,26 @@ Welcome to the official digital platform of **North City Public Secondary School
 
 ---
 
+## 🧠 Future Plans
+
+🔧 Add Firebase Contact Form or email API (Mailcoat/FormSubmit)
+
+🗂️ Develop a resource CMS (notes, past papers, announcements)
+
+📥 File uploads/downloads for students and staff
+
+🎓 Introduce parent portal with weekly test reports
+
+🔒 Staff login for marks, notices, and internal circulars
+
+🧮 Add quiz system with automatic marking (Flask + SQLite)
+
+🌙 Enable Dark Mode toggle for UX bonus
+
+📦 Use GitHub Actions for CI/CD deployments
+
+---
+
 ## 📂 Project Folder Structure
 
 <details>
@@ -60,13 +80,5 @@ Welcome to the official digital platform of **North City Public Secondary School
 └── app.py
 
 ```
-
-## 🧠 Future Plans
-
-- Add Firebase integration for contact forms
-- Expand CMS for admin uploads (notes, schedules)
-- Enable auto-deployment via CI/CD (GitHub Actions or Netlify)
-
----
 
 **Built with ❤️ by educators & developers**

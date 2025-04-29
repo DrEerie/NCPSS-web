@@ -1,0 +1,85 @@
+<header class="bg-white shadow sticky top-0 z-50">
+    <div class="w-full flex items-center justify-between px-6 py-4">
+      <!-- Logo + Title -->
+      <a href="/index.html" class="flex items-center gap-3 group transition-transform duration-300 ease-in-out transform hover:scale-105 active:scale-95">
+        <picture>
+          <img src="/assets/NCPSS logo.jpg" alt="NCPSS Logo" class="h-10 w-auto sm:h-12 object-contain">
+        </picture>
+        <h1 class="text-2xl font-bold text-blue-900 group-hover:opacity-90 transition-opacity duration-300">NCPSS</h1>
+      </a>
+  
+      <!-- Mobile Toggle -->
+      <button class="md:hidden block" id="navToggle">
+        <svg class="w-6 h-6 text-blue-900" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+  
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex space-x-6 text-blue-900 font-medium items-center">
+        <a href="{{ url_for('home') }}" class="nav-link">Home</a>
+        <a href="{{ url_for('static', filename='templates/pages/admission.html') }}" class="nav-link">Admissions</a>
+  
+        <!-- Events Dropdown -->
+        <div class="relative group dropdown">
+          <button class="flex items-center gap-1 nav-link">Events <span>▾</span></button>
+          <div class="dropdown-menu absolute left-0 mt-2 w-44 bg-white border border-gray-200 rounded shadow-md hidden">
+            <a href="#events" class="block px-4 py-2 hover:bg-gray-100">Upcoming Events</a>
+            <a href="#past-events" class="block px-4 py-2 hover:bg-gray-100">Past Events</a>
+          </div>
+        </div>
+  
+        <!-- Gallery Dropdown -->
+        <div class="relative group dropdown">
+          <button class="flex items-center gap-1 nav-link">Gallery <span>▾</span></button>
+          <div class="dropdown-menu absolute left-0 mt-2 w-44 bg-white border border-gray-200 rounded shadow-md hidden">
+            <a href="#gallery" class="block px-4 py-2 hover:bg-gray-100">Photos</a>
+            <a href="#videos" class="block px-4 py-2 hover:bg-gray-100">Videos</a>
+          </div>
+        </div>
+  
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="/pages/introduction.html" class="nav-link">Introduction</a>
+  
+        <!-- Login Dropdown -->
+        <div class="relative group dropdown">
+          <button class="flex items-center gap-1 nav-link text-white bg-blue-600 hover:bg-blue-700 px-3 py-1.5 rounded">Login <span>▾</span></button>
+          <div class="dropdown-menu absolute right-0 mt-2 w-40 bg-white border border-gray-200 shadow-md rounded hidden">
+            <a href="/login/staff.html" class="block px-4 py-2 hover:bg-gray-100">Staff Login</a>
+            <a href="/login/student.html" class="block px-4 py-2 hover:bg-gray-100">Student Login</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  
+    <!-- Divider -->
+    <div class="border-t border-gray-200"></div>
+  
+    <!-- Mobile Menu -->
+    <div class="md:hidden hidden px-6 pb-4 space-y-2" id="mobileMenu">
+      <a href="/index.html" class="block py-2">Home</a>
+      <a href="/pages/admission.html" class="block py-2">Admissions</a>
+  
+      <button class="block py-2 w-full text-left toggle-submenu">Events ▾</button>
+      <div class="hidden pl-4 space-y-1 submenu">
+        <a href="#events" class="block py-1">Upcoming Events</a>
+        <a href="#past-events" class="block py-1">Past Events</a>
+      </div>
+  
+      <button class="block py-2 w-full text-left toggle-submenu">Gallery ▾</button>
+      <div class="hidden pl-4 space-y-1 submenu">
+        <a href="#gallery" class="block py-1">Photos</a>
+        <a href="#videos" class="block py-1">Videos</a>
+      </div>
+  
+      <a href="#contact" class="block py-2">Contact</a>
+      <a href="/pages/introduction.html" class="block py-2">Introduction</a>
+      
+  
+      <button class="block py-2 w-full text-left toggle-submenu">Login ▾</button>
+      <div class="hidden pl-4 space-y-1 submenu">
+        <a href="/login/staff.html" class="block py-1">Staff Login</a>
+        <a href="/login/student.html" class="block py-1">Student Login</a>
+      </div>
+    </div>
+</header>

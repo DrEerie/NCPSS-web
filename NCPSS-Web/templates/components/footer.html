@@ -1,0 +1,34 @@
+<!-- components/footer.html -->
+<footer class="bg-blue-900 text-white mt-10">
+    <div class="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
+      <div>
+        <h3 class="text-lg font-semibold mb-3">About NCPSS</h3>
+        <p>North City Public Secondary School is dedicated to nurturing bright futures through academic excellence and character building.</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold mb-3">Quick Links</h3>
+        <ul>
+          <li><a href="admission.html" class="hover:underline">Admissions</a></li>
+          <li><a href="#events" class="hover:underline">Events</a></li>
+          <li><a href="#gallery" class="hover:underline">Gallery</a></li>
+          <li><a href="#contact" class="hover:underline">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold mb-3">Contact</h3>
+        <p>📍 B-12, Sector 7-D/4, Shadmmaan Town, North Karachi</p>
+        <p>📞 (+92) 0335-7564148</p>
+        <p>📧 info@ncpss.edu.pk</p>
+      </div>
+    </div>
+    <div class="text-center py-4 bg-blue-950 text-xs">
+      &copy;  {{ year }} NCPSS. All rights reserved.
+    </div>
+  </footer>
+
+<script>
+  // Insert current year automatically
+  document.querySelector('footer .text-xs').innerHTML = 
+    '&copy; ' + new Date().getFullYear() + ' NCPSS. All rights reserved.';
+</script>
+

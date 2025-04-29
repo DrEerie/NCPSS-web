@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" class="transition-colors duration-300">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About NCPSS - Introduction</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+  <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
+  <meta name="theme-color" content="#1e40af">
+  <link rel="apple-touch-icon" href="/assets/NCPSS logo-icon-192x192.jpg">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="mobile-web-app-capable" content="yes">
+<!-- favicon-->
+<link rel="shortcut icon" type="image/x-icon" href="/assets/NCPSS logo.jpg" />
+
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+  
+  <!-- Responsive Navbar -->
+  <div id="navbar"></div>
+  
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-blue-900 to-blue-600 text-white py-16">
+    <div class="max-w-4xl mx-auto text-center px-6">
+      <h1 class="text-4xl font-bold mb-4">Welcome to NCPSS</h1>
+      <p class="text-lg text-blue-100">A place where academic excellence meets character development</p>
+    </div>
+  </section>
+
+  <!-- Introduction Section -->
+  <section class="max-w-5xl mx-auto py-16 px-6">
+    <div class="mb-12 text-center">
+      <h2 class="text-3xl font-bold text-blue-800 mb-4">Our Mission</h2>
+      <p class="text-gray-600 text-lg">To nurture young minds with quality education, instill moral values, and prepare them for a technologically driven world.</p>
+    </div>
+    
+    <div class="mb-12 text-center">
+      <h2 class="text-3xl font-bold text-blue-800 mb-4">Our Vision</h2>
+      <p class="text-gray-600 text-lg">To be a leading educational institution where every student is empowered to become a lifelong learner, responsible citizen, and future leader.</p>
+    </div>
+
+    <div class="mb-12 text-center">
+      <h2 class="text-3xl font-bold text-blue-800 mb-4">Our Background</h2>
+      <p class="text-gray-600 text-lg">Established with a commitment to academic integrity and innovation, NCPSS has been shaping futures since its inception. Our journey started with a small community vision and has now evolved into a multi-level institution catering from Montessori to Matriculation and beyond.</p>
+    </div>
+
+    <div class="mb-12 text-center">
+      <h2 class="text-3xl font-bold text-blue-800 mb-4">Key Features</h2>
+      <ul class="list-disc list-inside text-gray-700 text-left max-w-xl mx-auto">
+        <li>Interactive, concept-based teaching approach</li>
+        <li>Digital classrooms and STEM education initiatives</li>
+        <li>Well-structured assessment & feedback systems</li>
+        <li>Affordable yet quality-focused education</li>
+        <li>Regular co-curricular and character-building activities</li>
+      </ul>
+    </div>
+  </section>
+
+
+  <!-- Scroll to Top Button -->
+  <button id="scroll-top-btn" class="hidden fixed bottom-4 right-4 bg-blue-600 text-white p-2 rounded-full shadow-md">
+    ↑
+  </button>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>

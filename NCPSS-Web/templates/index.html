@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en" class="transition-colors duration-300">
+  <head>
+    <!-- Meta Essentials -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="NCPSS Team">
+    <meta name="theme-color" content="#1e40af">
+    <meta name="description" content="Welcome to NCPSS, a premier school offering quality education with a focus on innovation, concept-based learning, and student growth.">
+    <meta name="keywords" content="NCPSS, North City Public Secondary School, education, Karachi, school, admissions, Montessori, primary, secondary, FBSIE, Federal Board, Karachi Board, BSEK, College, intermediate, Hifz-e-Quran">
+
+    <!-- SEO Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "North City Public Secondary School",
+        "alternateName": "NCPSS",
+        "url": "https://ncpss.yourdomain.com", 
+        "logo": "https://ncpss.yourdomain.com/static/assets/images/logo.png",
+        "description": "A concept-based, tech-forward school nurturing innovation and academic excellence.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Main Road, Block 7",
+          "addressLocality": "Karachi",
+          "addressRegion": "Sindh",
+          "postalCode": "75300",
+          "addressCountry": "PK"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+92-300-1234567",
+          "contactType": "Customer Support",
+          "areaServed": "PK",
+          "availableLanguage": ["English", "Urdu"]
+        },
+        "sameAs": [
+          "https://www.facebook.com/ncpss",
+          "https://www.instagram.com/ncpss"
+        ]
+      }
+    </script>
+
+    <!-- Title -->
+    <title>NCPSS - North City Public Secondary School</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='assets/NCPSS logo.jpg') }}">
+
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- Tailwind CDN Script (optional if using local) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- PWA -->
+    <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='assets/NCPSS logo-icon-192x192.jpg') }}">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
+</head>
+
+
+<body class="bg-gray-100 text-gray-800">
+  <!-- News Bar -->
+  <div class="bg-blue-800 text-white text-sm py-2 text-center animate-pulse">
+    📢 Admissions open for 2025! Apply now to secure your child's future.
+  </div>
+
+  <!-- Responsive Navbar -->
+  <div id="navbar"></div>
+  
+<main> 
+ <!-- Hero Section -->
+  <section class="relative w-full h-[60vh] sm:h-[50vh] xs:h-[40vh] overflow-hidden bg-[#86c8e6]">
+  <!-- Carousel Container -->
+  <div id="hero-carousel" class="absolute inset-0 w-full h-full flex items-center justify-center">
+    <img src="{{ url_for('static', filename='assets/images/IMG-20250410-WA0070.jpg') }}" class="carousel-image" alt="Campus External Pic">
+    <img src="{{ url_for('static', filename='assets/IMG-20250410-WA0076.jpg') }}" class="carousel-image" alt="Another External Pic">
+    <img src="{{ url_for('static', filename='assets/images/NCPSSmatricResult2024.jpg') }}" class="carousel-image" alt="Karachi Board Result 2024">
+  </div>
+
+  <!-- Controls -->
+  <button id="prev" class="absolute top-1/2 left-4 transform -translate-y-1/2 z-10 bg-white bg-opacity-30 p-3 rounded-full hover:bg-opacity-50 transition-all duration-300">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+      <path d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+    </svg>
+  </button>
+  <button id="next" class="absolute top-1/2 right-4 transform -translate-y-1/2 z-10 bg-white bg-opacity-30 p-3 rounded-full hover:bg-opacity-50 transition-all duration-300">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+      <path d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+    </svg>
+  </button>
+  </section>
+
+
+  <section id="welcome-section" class="py-16 relative overflow-hidden">
+    <!-- Animated background -->
+    <div class="absolute inset-0 bg-gradient-to-br from-indigo-200 via-purple-100 to-pink-200 z-0">
+      <div class="absolute top-0 left-0 w-full h-full">
+        <div class="floating-circle bg-blue-200 opacity-20"></div>
+        <div class="floating-circle bg-purple-200 opacity-20" style="animation-delay: 2s;"></div>
+        <div class="floating-circle bg-pink-200 opacity-20" style="animation-delay: 4s;"></div>
+      </div>
+    </div>
+  
+    <!-- Content container -->
+    <div class="max-w-4xl mx-auto px-6 relative z-10">
+      <div class="relative bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl opacity-0 transform transition-all duration-700" data-animation="reveal-welcome">
+        <!-- Decorative elements -->
+        <div class="absolute -top-6 -left-6 w-12 h-12 rounded-full bg-gradient-to-r from-indigo-500 to-purple-600 opacity-0" data-animation="pop-in" data-delay="800"></div>
+        <div class="absolute -bottom-6 -right-6 w-12 h-12 rounded-full bg-gradient-to-r from-pink-500 to-rose-500 opacity-0" data-animation="pop-in" data-delay="1000"></div>
+        
+        <h2 class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-700 mb-6 relative opacity-0 transform transition-all duration-700" data-animation="slide-up" data-delay="300">
+          Welcome to NCPSS
+        </h2>
+        
+        <p class="text-gray-700 text-lg mb-8 leading-relaxed max-w-3xl mx-auto opacity-0 transform transition-all duration-700" data-animation="slide-up" data-delay="500">
+          At NCPSS, we are committed to nurturing young minds with quality education, moral values, and a focus on innovation. Our approach combines traditional wisdom with modern teaching methods to prepare students for future challenges.
+        </p>
+        
+        <div class="mt-8 opacity-0 transform transition-all duration-700" data-animation="slide-up" data-delay="700">
+          <a href="{{ url_for('introduction') }}" class="inline-block bg-gradient-to-r from-indigo-600 to-purple-700 text-white px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group">
+            <span class="flex items-center justify-center">
+              Learn more
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Programs Offered Section -->
+  <section id="programs-section" class="py-16 bg-gradient-to-l from-green-500 to-blue-400 text-white">
+    <div class="max-w-6xl mx-auto px-4 text-center text-gray-800">
+      <h2 class="text-3xl font-bold text-center mb-10 opacity-0 transform transition-all duration-700" data-animation="fade-in">Programs We Offer</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow text-center opacity-0 transform transition-all duration-700" data-animation="fade-slide" data-direction="right">
+          <h3 class="text-xl font-semibold mb-2">Montessori</h3>
+          <p class="text-gray-600">A nurturing environment for early learners.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow text-center opacity-0 transform transition-all duration-700" data-animation="fade-slide" data-direction="up" data-delay="100">
+          <h3 class="text-xl font-semibold mb-2">Primary</h3>
+          <p class="text-gray-600">Building strong foundations for lifelong learning.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow text-center opacity-0 transform transition-all duration-700" data-animation="fade-slide" data-direction="left" data-delay="200">
+          <h3 class="text-xl font-semibold mb-2">Secondary (BSEK + FBISE)</h3>
+          <p class="text-gray-600">Preparing students for academic excellence and beyond.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow text-center opacity-0 transform transition-all duration-700" data-animation="fade-slide" data-direction="right" data-delay="300">
+          <h3 class="text-xl font-semibold mb-2">Intermediate (BIEK + FBISE)</h3>
+          <p class="text-gray-600">A bridge to higher education and career readiness.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow text-center opacity-0 transform transition-all duration-700" data-animation="fade-slide" data-direction="up" data-delay="400">
+          <h3 class="text-xl font-semibold mb-2">Hifz-e-Quran</h3>
+          <p class="text-gray-600">A program dedicated to the memorization and understanding of the Quran.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow text-center opacity-0 transform transition-all duration-700" data-animation="fade-slide" data-direction="left" data-delay="500">
+          <h3 class="text-xl font-semibold mb-2">Summer Camps / Courses</h3>
+          <p class="text-gray-600">Engaging activities designed for all age groups.</p>  
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!--Why choose NCPSS-->
+  <section id="why-section" class="py-12 bg-gradient-to-tr from-indigo-300 from-25% via-sky-200 via-15% to-emerald-300 to-60%">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-10 opacity-0 transform transition-all duration-700" data-animation="fade-in">Why Choose NCPSS</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="feature-card bg-gray-50 p-6 rounded-lg shadow text-center opacity-0 transform transition-all duration-700" data-animation="zoom-in">
+          <div class="icon-container mx-auto mb-4 w-20 h-20 relative">
+            <img src="{{ url_for('static', filename='assets/icons/facultyMembers.png') }}" alt="Faculty" class="w-full h-full object-contain" loading="lazy">
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Experienced Faculty</h3>
+          <p class="text-gray-600">Most Experienced and Qualified Faculty</p>
+        </div>
+        <div class="feature-card bg-gray-50 p-6 rounded-lg shadow text-center opacity-0 transform transition-all duration-700" data-animation="zoom-in" data-delay="150">
+          <div class="icon-container mx-auto mb-4 w-20 h-20 relative">
+            <img src="{{ url_for('static', filename='assets/icons/Subject-Experts.png') }}" alt="Experts" class="w-full h-full object-contain" loading="lazy">
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Subject Experts</h3>
+          <p class="text-gray-600">Subject experts in all Courses</p>
+        </div>
+        <div class="feature-card bg-gray-50 p-6 rounded-lg shadow text-center opacity-0 transform transition-all duration-700" data-animation="zoom-in" data-delay="300">
+          <div class="icon-container mx-auto mb-4 w-20 h-20 relative">
+            <img src="{{ url_for('static', filename='assets/icons/Concept-Building.png') }}" alt="Concepts" class="w-full h-full object-contain" loading="lazy">
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Concept Building</h3>
+          <p class="text-gray-600">Focus on detailed concept building</p>
+        </div>
+        <div class="feature-card bg-gray-50 p-6 rounded-lg shadow text-center opacity-0 transform transition-all duration-700" data-animation="zoom-in" data-delay="450">
+          <div class="icon-container mx-auto mb-4 w-20 h-20 relative">
+            <img src="{{ url_for('static', filename='assets/icons/Regular-Evaluation.png') }}" alt="Regular Evaluation" class="w-full h-full object-contain" loading="lazy">
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Regular Evaluation</h3>
+          <p class="text-gray-600">Tests on a weekly basis and exams on a bimonthly basis.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+
+<!-- Testimonials Section -->
+<section class="bg-gradient-to-l from-blue-500 to-green-600 text-white animate-pulse py-6">
+  <div class="max-w-6xl mx-auto px-2 text-center">
+    <h2 class="text-3xl font-bold mb-6">What Our Students Say</h2>
+    <div id="testimonial-container" class="relative overflow-hidden py-2">
+      <div class="testimonial-item absolute inset-0 opacity-0 transform translate-x-full transition-all duration-500 ease-in-out">
+        <p class="text-gray-200 italic">"NCPSS has been a life-changing experience for me. The teachers are amazing!"</p>
+        <h3 class="text-white font-semibold mt-4">- Moish Azhar</h3>
+      </div>
+      <div class="testimonial-item absolute inset-0 opacity-0 transform translate-x-full transition-all duration-500 ease-in-out">
+        <p class="text-gray-200 italic">"The focus on concept-based learning has helped me excel in my studies."</p>
+        <h3 class="text-white font-semibold mt-4">- Pappu Danger</h3>
+      </div>
+      <div class="testimonial-item absolute inset-0 opacity-0 transform translate-x-full transition-all duration-500 ease-in-out">
+        <p class="text-gray-200 italic">"I love the co-curricular activities and the supportive environment. This is just a testing. Once agian i'm just going to test it. Oh !  I'll do it . Yeah I'd like use unformal like i'll instead of I will. Hehe."</p>
+        <h3 class="text-white font-semibold mt-4">- Einestien</h3>
+      </div>
+    </div>
+    <div class="testimonial-item absolute inset-0 opacity-0 transform translate-x-full transition-all duration-500 ease-in-out">
+      <p class="text-gray-200 italic">"The faculty is highly qualified and always ready to help."</p>
+      <h3 class="text-white font-semibold mt-4">- User 3</h3>
+    </div>
+    <div class="mt-1">
+      <a href="/pages/testimonials.html" class="bg-white text-blue-800 px-6 py-3 rounded-full shadow hover:bg-fuchsia-500 transition">Read More Testimonials</a>
+    </div>
+  </div>
+</section>
+
+<!-- Other Institutes Section -->
+<section class="py-4 bg-gradient-to-br from-white via-sky-50 to-blue-100">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-4 text-center text-blue-900">Our Other Institutes</h2>
+
+    <div id="institutes-carousel" class="relative overflow-hidden">
+      <!-- Indicators -->
+      <div class="indicators flex justify-center gap-6 mb-4 py-4">
+        <div class="indicator-wrapper relative w-20 h-20" data-index="0">
+          <svg class="progress-ring absolute top-0 left-0 w-full h-full">
+            <circle class="progress-ring-bg" cx="40" cy="40" r="38" stroke="#d1d5db" stroke-width="4" fill="transparent"/>
+            <circle class="progress-ring-circle" cx="40" cy="40" r="38" stroke="#0f3572" stroke-width="4" fill="transparent"/>
+          </svg>
+          <div class="indicator-img-container absolute top-0 left-0 w-full h-full">
+            <img src="{{ url_for('static', filename='assets/logos/HSPSS-newLOGO-2025-withHSPSS.jpeg') }}" alt="HSPSS logo" class="indicator-img" />
+          </div>
+        </div>
+        <div class="indicator-wrapper relative w-20 h-20" data-index="1">
+          <svg class="progress-ring absolute top-0 left-0 w-full h-full">
+            <circle class="progress-ring-bg" cx="40" cy="40" r="38" stroke="#d1d5db" stroke-width="4" fill="transparent"/>
+            <circle class="progress-ring-circle" cx="40" cy="40" r="38" stroke="#0f3572" stroke-width="4" fill="transparent"/>
+          </svg>
+          <div class="indicator-img-container absolute top-0 left-0 w-full h-full">
+            <img src="{{ url_for('static', filename='assets/logos/NorthCity-Intermediate-college.jpg') }}" alt="NCIC Logo" class="indicator-img" />
+          </div>
+        </div>
+        <div class="indicator-wrapper relative w-20 h-20" data-index="2">
+          <svg class="progress-ring absolute top-0 left-0 w-full h-full">
+            <circle class="progress-ring-bg" cx="40" cy="40" r="38" stroke="#d1d5db" stroke-width="4" fill="transparent"/>
+            <circle class="progress-ring-circle" cx="40" cy="40" r="38" stroke="#0f3572" stroke-width="4" fill="transparent"/>
+          </svg>
+          <div class="indicator-img-container absolute top-0 left-0 w-full h-full">
+            <img src="#" alt="Gamma Logo" class="indicator-img" />
+          </div>
+        </div>
+      </div>
+      
+      <!-- Slides Container -->
+      <div class="carousel-track relative">
+        <!-- Slide 1 -->
+        <div class="carousel-slide active flex flex-col md:flex-row items-center justify-between gap-6 w-full h-full px-6 md:px-12 py-8 md:py-12 bg-white rounded-lg shadow-xl transition-all duration-500">
+          <!-- Text Content -->
+          <div class="w-full md:w-1/2 space-y-4 text-center md:text-left">
+            <h3 class="text-2xl md:text-3xl font-bold text-blue-900 animate-slide-down">High Star Public Secondary School</h3>
+            <p class="text-gray-700 animate-slide-right">
+              Known for its excellence in science and technology, HSPSS prepares future leaders with innovation. Since: 1983
+            </p>
+            <a href="https://www.hspss.edu.pk" target="_blank" rel="noopener" class="inline-block mt-3 px-5 py-2 bg-blue-600 text-white rounded-md hover:bg-red-800 transition animate-slide-up">
+              Learn More
+            </a>
+          </div>
+          <!-- Image Side -->
+          <div class="w-full md:w-1/2">
+            <img src="{{ url_for('static', filename='assets/Other-Institutes/Result day Sec Boys all.jpg') }}" alt="HSPSS logo" class="w-full h-auto rounded-lg shadow-md object-cover animate-fade-in" loading="lazy" />
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-slide hidden flex flex-col md:flex-row items-center justify-between gap-6 w-full h-full px-6 md:px-12 py-8 md:py-12 bg-white rounded-lg shadow-xl transition-all duration-500">
+          <!-- Text Content -->
+          <div class="w-full md:w-1/2 space-y-4 text-center md:text-left">
+            <h3 class="text-2xl md:text-3xl font-bold text-blue-900 animate-slide-down">North City Intermediate College</h3>
+            <p class="text-gray-700 animate-slide-right">
+              Known for its excellence in science and technology, Alpha Institute prepares future leaders with innovation.
+            </p>
+            <a href="#" class="inline-block mt-3 px-5 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition animate-slide-up">
+              Learn More
+            </a>
+          </div>
+          <!-- Image Side -->
+          <div class="w-full md:w-1/2">
+            <img src="assets/images/alpha-building.jpg" alt="Alpha Institute Building" class="w-full h-auto rounded-lg shadow-md object-cover animate-fade-in" />
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-slide hidden flex flex-col md:flex-row items-center justify-between gap-6 w-full h-full px-6 md:px-12 py-8 md:py-12 bg-white rounded-lg shadow-xl transition-all duration-500">
+          <!-- Text Content -->
+          <div class="w-full md:w-1/2 space-y-4 text-center md:text-left">
+            <h3 class="text-2xl md:text-3xl font-bold text-blue-900 animate-slide-down">Gamma Institute</h3>
+            <p class="text-gray-700 animate-slide-right">
+              Known for its excellence in arts and humanities, Gamma Institute fosters creativity and critical thinking.
+            </p>
+            <a href="#" class="inline-block mt-3 px-5 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition animate-slide-up">
+              Learn More
+            </a>
+          </div>
+          <!-- Image Side -->
+          <div class="w-full md:w-1/2">
+            <img src="assets/images/gamma-building.jpg" alt="Gamma Institute Building" class="w-full h-auto rounded-lg shadow-md object-cover animate-fade-in" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+ <!-- Gallery Section -->
+<section id="gallery" class="py-16 bg-gradient-to-br from-blue-50 to-indigo-100 overflow-hidden">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-center inline-block relative opacity-0 transform transition-all duration-700" data-animation="title-reveal">
+        <span class="relative z-10">Campus Life Gallery</span>
+        <span class="absolute bottom-0 left-0 w-full h-3 bg-yellow-300 opacity-50 transform -rotate-1"></span>
+      </h2>
+      <p class="text-gray-600 mt-4 max-w-2xl mx-auto opacity-0 transform transition-all duration-700" data-animation="fade-in" data-delay="300">
+        Take a visual journey through our vibrant campus environment
+      </p>
+    </div>
+
+    <!-- Gallery Categories -->
+    <div class="flex flex-wrap justify-center gap-4 mb-8 opacity-0 transform transition-all duration-700" data-animation="fade-in" data-delay="400">
+      <button class="gallery-filter bg-white px-4 py-2 rounded-full text-sm font-medium shadow-sm hover:shadow-md transition duration-300 active" data-category="all">
+        All Photos
+      </button>
+      <button class="gallery-filter bg-white px-4 py-2 rounded-full text-sm font-medium shadow-sm hover:shadow-md transition duration-300" data-category="campus">
+        Campus
+      </button>
+      <button class="gallery-filter bg-white px-4 py-2 rounded-full text-sm font-medium shadow-sm hover:shadow-md transition duration-300" data-category="events">
+        Events
+      </button>
+      <button class="gallery-filter bg-white px-4 py-2 rounded-full text-sm font-medium shadow-sm hover:shadow-md transition duration-300" data-category="classroom">
+        Classroom
+      </button>
+    </div>
+
+    <!-- Masonry Gallery -->
+    <div class="gallery-container opacity-0 transform transition-all duration-700" data-animation="fade-in" data-delay="500">
+      <div class="gallery-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="gallery-item relative overflow-hidden rounded-lg shadow-lg group" data-category="campus">
+          <img src="{{ url_for('static', filename='assets/IMG-20250410-WA0072.jpg') }}" alt="School Building" class="w-full h-64 object-cover transition duration-500 group-hover:scale-110" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-4">
+            <h4 class="text-white font-semibold text-lg transform translate-y-4 group-hover:translate-y-0 transition duration-300">School Building</h4>
+            <p class="text-white/80 text-sm transform translate-y-4 group-hover:translate-y-0 transition duration-300 delay-100">Our modern facilities provide an optimal learning environment</p>
+          </div>
+        </div>
+
+        <div class="gallery-item relative overflow-hidden rounded-lg shadow-lg group" data-category="events">
+          <img src="{{ url_for('static', filename='assets/NCPSS logo.jpg') }}" alt="School Logo" class="w-full h-64 object-cover transition duration-500 group-hover:scale-110" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-4">
+            <h4 class="text-white font-semibold text-lg transform translate-y-4 group-hover:translate-y-0 transition duration-300">School Identity</h4>
+            <p class="text-white/80 text-sm transform translate-y-4 group-hover:translate-y-0 transition duration-300 delay-100">Our logo represents our values and mission</p>
+          </div>
+        </div>
+
+        <div class="gallery-item relative overflow-hidden rounded-lg shadow-lg group" data-category="classroom">
+          <img src="/assets/Checklist.jpg" alt="Classroom Activity" class="w-full h-64 object-cover transition duration-500 group-hover:scale-110" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-4">
+            <h4 class="text-white font-semibold text-lg transform translate-y-4 group-hover:translate-y-0 transition duration-300">Learning Process</h4>
+            <p class="text-white/80 text-sm transform translate-y-4 group-hover:translate-y-0 transition duration-300 delay-100">Students engage in structured learning activities</p>
+          </div>
+        </div>
+
+        <!-- Hidden/additional gallery items that will show when "View Full Gallery" is clicked -->
+        <div class="gallery-item hidden-item relative overflow-hidden rounded-lg shadow-lg group" data-category="events">
+          <img src="/assets/IMG-20250410-WA0072.jpg" alt="Annual Function" class="w-full h-64 object-cover transition duration-500 group-hover:scale-110" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-4">
+            <h4 class="text-white font-semibold text-lg transform translate-y-4 group-hover:translate-y-0 transition duration-300">Annual Function</h4>
+            <p class="text-white/80 text-sm transform translate-y-4 group-hover:translate-y-0 transition duration-300 delay-100">Students showcase their talents during our annual day</p>
+          </div>
+        </div>
+
+        <div class="gallery-item hidden-item relative overflow-hidden rounded-lg shadow-lg group" data-category="classroom">
+          <img src="/assets/Checklist.jpg" alt="Science Lab" class="w-full h-64 object-cover transition duration-500 group-hover:scale-110" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-4">
+            <h4 class="text-white font-semibold text-lg transform translate-y-4 group-hover:translate-y-0 transition duration-300">Science Lab</h4>
+            <p class="text-white/80 text-sm transform translate-y-4 group-hover:translate-y-0 transition duration-300 delay-100">Hands-on experiments enhance conceptual learning</p>
+          </div>
+        </div>
+
+        <div class="gallery-item hidden-item relative overflow-hidden rounded-lg shadow-lg group" data-category="campus">
+          <img src="/assets/NCPSS logo.jpg" alt="Sports Ground" class="w-full h-64 object-cover transition duration-500 group-hover:scale-110" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-4">
+            <h4 class="text-white font-semibold text-lg transform translate-y-4 group-hover:translate-y-0 transition duration-300">Sports Facilities</h4>
+            <p class="text-white/80 text-sm transform translate-y-4 group-hover:translate-y-0 transition duration-300 delay-100">Students develop physical fitness and teamwork</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-10 opacity-0 transform transition-all duration-700" data-animation="fade-in" data-delay="600">
+      <button id="view-more-gallery" class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-3 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition duration-300 flex items-center mx-auto">
+        <span>View Full Gallery</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+        </svg>
+      </button>
+    </div>
+  </div>
+<div id="gallery-lightbox" class="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center hidden">
+  <div class="lightbox-content relative max-w-5xl w-full">
+    <img id="lightbox-image" src="" alt="Gallery image" class="max-h-[80vh] max-w-full mx-auto">
+    <div class="lightbox-caption absolute bottom-0 left-0 right-0 bg-black bg-opacity-75 text-white p-4 text-center">
+      <h4 id="lightbox-title" class="text-xl font-bold"></h4>
+      <p id="lightbox-description" class="text-sm"></p>
+    </div>
+    <button id="lightbox-close" class="absolute top-4 right-4 text-white hover:text-gray-300">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+    <button id="lightbox-prev" class="absolute top-1/2 left-4 transform -translate-y-1/2 text-white hover:text-gray-300">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+    </button>
+    <button id="lightbox-next" class="absolute top-1/2 right-4 transform -translate-y-1/2 text-white hover:text-gray-300">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </button>
+  </div>
+</div>
+</section>
+
+  <!-- Our Recognitions/Affiliation Section -->
+<section id="recognitions" class="py-16 bg-gradient-to-tr from-gray-50 to-blue-50 overflow-hidden">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-center inline-block relative opacity-0 transform transition-all duration-700" data-animation="title-reveal">
+        <span class="relative z-10">Our Recognitions & Affiliations</span>
+        <span class="absolute bottom-0 left-0 w-full h-3 bg-green-300 opacity-50 transform -rotate-1"></span>
+      </h2>
+      <p class="text-gray-600 mt-4 max-w-2xl mx-auto opacity-0 transform transition-all duration-700" data-animation="fade-in" data-delay="300">
+        Accredited by prestigious educational bodies that ensure quality education standards
+      </p>
+    </div>
+
+    <!-- Timeline of achievements -->
+    <div class="recognition-timeline relative opacity-0 transform transition-all duration-700" data-animation="fade-in" data-delay="400">
+      <!-- Timeline line -->
+      <div class="absolute left-1/2 top-0 bottom-0 w-1 bg-blue-200 transform -translate-x-1/2"></div>
+      
+      <!-- Recognition items -->
+      <div class="timeline-container">
+        <!-- 2005 Recognition -->
+        <div class="timeline-item mb-16 opacity-0 transform transition-all duration-700" data-animation="slide-recognition" data-direction="right">
+          <div class="timeline-date absolute left-1/2 transform -translate-x-1/2 bg-blue-500 text-white font-medium py-1 px-4 rounded-full z-10">2005</div>
+          <div class="timeline-content bg-white rounded-lg shadow-lg p-6 ml-8 md:ml-0 md:mr-auto md:w-5/12 md:transform md:-translate-x-8 relative">
+            <div class="absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full border-4 border-blue-500 md:left-0 md:right-auto md:-translate-x-1/2"></div>
+            <div class="flex flex-col md:flex-row items-center">
+              <img src="/assets/logos/BSEK logo with bg.jpeg" alt="BSEK logo" class="h-20 w-auto mb-4 md:mb-0 md:mr-6" loading="lazy">
+              <div>
+                <h3 class="text-xl font-bold text-blue-900">Board of Secondary Education Karachi</h3>
+                <p class="text-gray-600 mt-2">Recognized for providing quality secondary education according to regional standards.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2022 Recognition -->
+        <div class="timeline-item mb-16 opacity-0 transform transition-all duration-700" data-animation="slide-recognition" data-direction="left" data-delay="150">
+          <div class="timeline-date absolute left-1/2 transform -translate-x-1/2 bg-blue-500 text-white font-medium py-1 px-4 rounded-full z-10">2022</div>
+          <div class="timeline-content bg-white rounded-lg shadow-lg p-6 ml-8 md:ml-auto md:mr-0 md:w-5/12 md:transform md:translate-x-8 relative">
+            <div class="absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full border-4 border-blue-500 md:right-auto md:left-0 md:-translate-x-1/2"></div>
+            <div class="flex flex-col md:flex-row items-center">
+              <img src="/assets/logos/BIEK logo with bg.jpeg" alt="BIEK logo" class="h-20 w-auto mb-4 md:mb-0 md:mr-6" loading="lazy">
+              <div>
+                <h3 class="text-xl font-bold text-blue-900">Board of Intermediate Education Karachi</h3>
+                <p class="text-gray-600 mt-2">Recognized for intermediate level education, preparing students for higher studies.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2023 Recognition -->
+        <div class="timeline-item mb-16 opacity-0 transform transition-all duration-700" data-animation="slide-recognition" data-direction="right" data-delay="300">
+          <div class="timeline-date absolute left-1/2 transform -translate-x-1/2 bg-blue-500 text-white font-medium py-1 px-4 rounded-full z-10">2023</div>
+          <div class="timeline-content bg-white rounded-lg shadow-lg p-6 ml-8 md:ml-0 md:mr-auto md:w-5/12 md:transform md:-translate-x-8 relative">
+            <div class="absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full border-4 border-blue-500 md:left-0 md:right-auto md:-translate-x-1/2"></div>
+            <div class="flex flex-col md:flex-row items-center">
+              <img src="/assets/logos/Wafaq-ul-madaris-il-arabia-pakistan.jpeg" alt="Wafaq-ul-Madaris" class="h-20 w-auto mb-4 md:mb-0 md:mr-6" loading="lazy">
+              <div>
+                <h3 class="text-xl font-bold text-blue-900">Wafaq-ul-Madaris Al-Arabia Pakistan</h3>
+                <p class="text-gray-600 mt-2">Registered for Islamic education and Quran memorization programs.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2024 Recognition -->
+        <div class="timeline-item opacity-0 transform transition-all duration-700" data-animation="slide-recognition" data-direction="left" data-delay="450">
+          <div class="timeline-date absolute left-1/2 transform -translate-x-1/2 bg-blue-500 text-white font-medium py-1 px-4 rounded-full z-10">2024</div>
+          <div class="timeline-content bg-white rounded-lg shadow-lg p-6 ml-8 md:ml-auto md:mr-0 md:w-5/12 md:transform md:translate-x-8 relative">
+            <div class="absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full border-4 border-blue-500 md:right-auto md:left-0 md:-translate-x-1/2"></div>
+            <div class="flex flex-col md:flex-row items-center">
+              <img src="/assets/logos/FBISE logo with BS.jpeg" alt="FBISE logo" class="h-20 w-auto mb-4 md:mb-0 md:mr-6" loading="lazy">
+              <div>
+                <h3 class="text-xl font-bold text-blue-900">Federal Board of Intermediate & Secondary Education</h3>
+                <p class="text-gray-600 mt-2">Recognized for providing education in accordance with national standards.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- scroller button to go to top -->
+<button id="scroll-top-btn" class="hidden fixed bottom-4 right-4 bg-blue-600 text-white p-2 rounded-full shadow-md">
+  ↑
+</button>
+ 
+<!-- 🔔 Announcement Modal -->
+  <div id="announcement-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+    <div id="announcement-box" class="bg-white dark:bg-gray-900 dark:text-white rounded-xl shadow-lg p-6 w-11/12 sm:w-4/5 md:w-3/5 lg:w-1/2 xl:w-2/5 relative text-center max-h-[90vh] overflow-auto">
+  
+      <!-- Close Button -->
+      <button id="close-modal" class="absolute top-2 right-3 text-gray-600 dark:text-gray-300 hover:text-red-600 text-2xl font-bold">
+        &times;
+      </button>
+  
+      <!-- Announcement Content Area -->
+      <div class="flex flex-col items-center gap-3" id="announcement-content">
+        <!-- Dynamic content will be injected here -->
+      </div>
+  
+      <!-- Navigation Buttons -->
+      <div class="flex justify-between items-center mt-4">
+        <button id="prev-announcement" class="text-blue-600 dark:text-blue-300 hover:underline">← Previous</button>
+        <button id="next-announcement" class="text-blue-600 dark:text-blue-300 hover:underline">Next →</button>
+      </div>
+    </div>
+  </div>  
+
+
+
+  <!-- Footer -->
+  <div id="footer"></div>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+  
+</body>
+</html>

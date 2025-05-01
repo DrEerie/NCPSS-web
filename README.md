@@ -72,7 +72,7 @@ Welcome to the official digital platform of **North City Public Secondary School
 |   |   ├── login_staff.html
 |   |   ├── login_student.html
 │   |   └── ... more internal pages  (optionals i.e. to add more if applicable)
-│   ├── dashbooard/
+│   ├── dashboard/
 │   |   ├── student.html
 │   |   └── staff.html
 |   ├── components/

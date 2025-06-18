@@ -58,8 +58,12 @@ Welcome to the official digital platform of **North City Public Secondary School
 │   |   ├── logos/
 │   |   └── Other-Institutes/
 │   ├── css/
+|   |   ├── faq.css
+|   |   ├── logins.css
 │   │   └── style.css
 │   ├── js/
+|   |   ├── faq.js
+|   |   ├── logins.js
 │   │   └── script.js
 │   └── pwa/
 │   |   ├── service-worker.js
@@ -71,10 +75,13 @@ Welcome to the official digital platform of **North City Public Secondary School
 │   |   ├── introduction.html
 |   |   ├── login_staff.html
 |   |   ├── login_student.html
+|   |   ├── faq.html
 │   |   └── ... more internal pages  (optionals i.e. to add more if applicable)
 │   ├── dashboard/
 │   |   ├── student.html
 │   |   └── staff.html
+|   ├── layout/
+|   |   └── login_base.html
 |   ├── components/
 │   |   ├── navbar.html
 │   |   ├── footer.html

@@ -1,0 +1,10 @@
+/* Smooth icon rotation */
+.faq-icon.rotate-180 {
+    transform: rotate(180deg);
+  }
+  
+  /* Optional animation tweaks */
+  .faq-answer {
+    transition: all 0.2s ease-in-out;
+  }
+  

@@ -1,3 +1,4 @@
+"use strict";
 // Service Worker for NCPSS PWA
 const CACHE_NAME = 'ncpss-cache-v2';
 const OFFLINE_URL = '/static/pwa/offline.html';

@@ -1,3 +1,4 @@
+"use strict";
 // Load components dynamically and handle errors gracefully
 function loadComponent(id, url, callback) {
     fetch(url)
@@ -716,7 +717,7 @@ function loadComponent(id, url, callback) {
       {
         title: "Admissions Open",
         text: "Apply before 30th April to secure your seat.",
-        image: "/assets/IMG-20250410-WA0072.jpg"
+        image: "{{url_for('static', filename='assets/IMG-20250410-WA0076.jpg')}}"
       },
       {
         title: "Eid Holidays",

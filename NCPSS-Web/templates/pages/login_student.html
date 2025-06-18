@@ -1,6 +1,40 @@
-{% include 'components/navbar.html' %}
-<h2 class="text-xl text-center mt-6">Student Login Page</h2>
-<form method="post" action="/login/student">
-    <!-- Form elements here -->
+{% extends 'layout/login_base.html' %}
+
+{% block title %}Student Login{% endblock %}
+{% block heading %}Student Login{% endblock %}
+{% block icon %}👩‍🎓{% endblock %}
+
+{% block content %}
+<form method="POST" class="space-y-4">
+    <div>
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-200">Username</label>
+        <input type="text" name="username" required
+               class="w-full mt-1 px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500">
+    </div>
+
+    <div>
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-200">Password</label>
+        <div class="relative">
+            <input type="password" name="password" id="password-input" required
+                   class="w-full mt-1 px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white pr-10 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            <button type="button" id="toggle-password"
+                    class="absolute right-3 top-1/2 transform -translate-y-1/2 text-sm text-gray-600 dark:text-gray-300">Show</button>
+        </div>
+    </div>
+    <div>
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-200">What is <span id="math-question"></span>?</label>
+        <input type="text" name="captcha" id="captcha-input" required
+               class="w-full mt-1 px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white">
+    </div>    
+
+    <div class="flex items-center">
+        <input type="checkbox" id="remember" name="remember" class="h-4 w-4 text-indigo-600">
+        <label for="remember" class="ml-2 text-sm text-gray-700 dark:text-gray-200">Remember me</label>
+    </div>
+
+    <button type="submit"
+            class="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-2 rounded-md font-semibold transition-all">
+        Log in
+    </button>
 </form>
-{% include 'components/footer.html' %}
+{% endblock %}

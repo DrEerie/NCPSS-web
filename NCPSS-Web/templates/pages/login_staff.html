@@ -1,6 +1,22 @@
-{% include 'components/navbar.html' %}
-<h2 class="text-xl text-center mt-6">Staff Login Page</h2>
-<form method="post" action="/login/staff">
-    <!-- Form elements here -->
+{% extends 'layout/login_base.html' %}
+
+{% block title %}Staff Login{% endblock %}
+{% block heading %}Staff Login{% endblock %}
+{% block icon %}👨‍🏫{% endblock %}
+
+{% block content %}
+<form method="POST">
+    <label>Username:</label>
+    <input type="text" name="username" required>
+    <label>Password:</label>
+    <input type="password" name="password" required>
+    <div>
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-200">What is <span id="math-question"></span>?</label>
+        <input type="text" name="captcha" id="captcha-input" required
+               class="w-full mt-1 px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white">
+    </div>
+    
+    <button type="submit">Login</button>
 </form>
-{% include 'components/footer.html' %}
+<a class="back-link" href="{{ url_for('home') }}">← Back to Home</a>
+{% endblock %}

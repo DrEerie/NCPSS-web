@@ -1,3 +1,9 @@
+---
+
+Still Under Construction 
+
+---
+
 # 🏫 NCPSS School Website
 
 Welcome to the official digital platform of **North City Public Secondary School (NCPSS)** — a forward-thinking, tech-empowered educational institution committed to concept-based learning and innovation.
